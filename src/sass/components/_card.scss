@@ -1,0 +1,57 @@
+@use '../utils/mixins'as *;
+@use '../utils/variables'as *;
+
+.card {
+    padding: 3.2rem;
+    font-size: $default-font-size;
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+
+    // @include respond(lg) {
+    //     margin-top: 2.4rem;
+    // }
+
+    &__icon {
+        width: 72px;
+        height: 72px;
+        background: var(--linear-gradient-toTop);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s;
+
+        & .icon {
+            width: 4.8rem;
+            height: 4.8rem;
+            margin: 0;
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--box-shadow);
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        font-weight: 500;
+        color: var(--primary-color);
+        transition: .2s;
+
+        &:hover {
+            text-decoration: underline;
+            transform: translateX(3px);
+        }
+    }
+
+    &> :not(:first-child) {
+        padding-top: 1.6rem;
+    }
+}

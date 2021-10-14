@@ -1,0 +1,51 @@
+{
+  "name": "dentis",
+  "version": "1.0.0",
+  "description": "Landing dentis",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass --watch src/sass/index.scss:public/css/style.css",
+    "devServer": "live-server ./public/",
+    "pughtml": "pug --watch ./src/views/index.pug -o ./public/ --pretty",
+    "optimise-images": "imagemin src/images/  --plugin=pngquant --plugin=mozjpeg  --out-dir=public/images ",
+    "compile:sass": "sass src/sass/index.scss:public/css/style.comp.css",
+    "concat:css": "concat -o public/css/style.concat.css public/css/style.comp.css",
+    "prefix:css": "postcss  public/css/style.css -o public/css/style.prefix.css --use autoprefixer",
+    "compress:css": "sass --watch public/css/style.prefix.css:public/css/style.css --style compressed",
+    "build": "babel src -d lib",
+    "build-all": "npm-run-all compile:sass prefix:css compress:css",
+    "babel-w": "babel-watch ./src/js/script.js -o ./public/js/script.js",
+    "babel-compile": "babel ./src/js/script.js --watch -o ./public/js/script.js",
+    "start": "npm-run-all --parallel devServer sass:watch pughtml babel-compile"
+  },
+  "keywords": [
+    "Dental",
+    "Dentista"
+  ],
+  "author": "Wilson Muñoz",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.15.6",
+    "@types/aos": "^3.0.4",
+    "autoprefixer": "^10.2.5",
+    "babel-watch": "^7.4.1",
+    "concat": "^1.0.3",
+    "imagemin-cli": "^6.0.0",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.0",
+    "postcss-cli": "^8.3.1",
+    "pug": "^3.0.2",
+    "sass": "^1.41.0"
+  },
+  "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "hamburgers": "^1.1.3",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^9.0.0"
+  }
+}

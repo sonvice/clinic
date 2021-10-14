@@ -1,0 +1,28 @@
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$default-font-size:1.6rem;
+
+:root {
+    --primary-color: #0B556F;
+    --secondary-color: #F0FAF7;
+    --tertiary-color: #5DC9EE;
+    --black: #020E12;
+    --white: #fff;
+    --gray-500: #adb5bd;
+    --primary-hsl: hsl(196, 90%, 30%);
+
+    --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --linear-gradient: linear-gradient(to left, var(--tertiary-color), var(--primary-color));
+    --linear-gradient-toTop: linear-gradient(to top, var(--tertiary-color), var(--primary-color));
+    --border-radius: 0.8rem;
+}

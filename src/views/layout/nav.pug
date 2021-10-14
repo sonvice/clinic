@@ -1,0 +1,25 @@
+header.header
+    .container 
+        .row
+            .col-md-12.col-lg-4.box-logo
+                .logo 
+                    a(href="#")
+                        img(src="images/logo.svg", alt="Logo Peoples")
+                button.hamburger(type='button').hamburger--squeeze
+                    span.hamburger-box
+                        span.hamburger-inner
+            .col-md-12.col-lg-8
+                nav.navigation 
+                    ul.menu-list 
+                        li.menu-list__item
+                            a(href="#inicio").menu-list__link.active-nav Inicio
+                        li.menu-list__item
+                            a(href="#conocenos").menu-list__link Conócenos
+                        li.menu-list__item
+                            a(href="#galeria").menu-list__link Galería
+                        li.menu-list__item
+                            a(href="#medicos").menu-list__link Médicos
+                    button.btn.btn-primary 
+                            svg.icon
+                                use(xlink:href='images/sprite.svg#phone-fill')
+                            | +9 12345869

@@ -1,0 +1,25 @@
+.picture-medical {
+    position: relative;
+    display: block;
+
+    &__medico {
+        display: block;
+        width: 100%;
+        box-shadow: var(--box-shadow);
+        border-radius: 0.8rem;
+    }
+
+    &__name {
+        font-size: 2rem;
+        margin-top: 2.4rem;
+    }
+
+    &__cargo {
+        font-size: 1.6rem;
+    }
+}
+
+.medicos .picture:hover {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    transform: translateY(-1rem);
+}

@@ -1,0 +1,56 @@
+@use "../utils/variables"as *;
+@use '../utils/mixins'as *;
+
+.buble {
+    background-color: var(--secondary-color);
+    position: absolute;
+    padding: 1.6rem 2.4rem;
+    border-radius: 10rem;
+    box-shadow: var(--box-shadow);
+    display: block;
+
+    .buble__box {
+        display: flex;
+        align-items: center;
+    }
+
+    & .icon {
+        fill: var(--black);
+    }
+
+    & span {
+        font-size: $default-font-size;
+        white-space: nowrap;
+    }
+}
+
+.buble-left1 {
+    left: 0;
+    top: 10rem;
+
+    @include respond(sm) {
+        left: 0;
+        top: 17rem;
+    }
+}
+
+.buble-left2 {
+    left: -1.6rem;
+    bottom: 2rem;
+
+    @include respond(sm) {
+        left: 0rem;
+        bottom: 2rem;
+    }
+}
+
+.buble-right1 {
+    right: 1.4rem;
+    top: 60%;
+
+    @include respond(sm) {
+        right: auto;
+        left: 0;
+        top: 62%;
+    }
+}

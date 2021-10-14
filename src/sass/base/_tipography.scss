@@ -1,0 +1,32 @@
+@use '../utils/variables'as *;
+@use '../utils/mixins'as *;
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--black);
+
+}
+
+.header {
+    font-size: 2rem;
+}
+
+.title {
+    font-size: 4.8rem;
+    margin: 0;
+    color: inherit;
+}
+
+.paragraph {
+    font-size: 2rem;
+}
+
+.title-section {
+    font-size: 4.8rem;
+
+    @include respond(sm) {
+        font-size: 3.8rem;
+    }
+}

@@ -1,0 +1,66 @@
+@use '../utils/mixins'as *;
+@use '../utils/variables'as *;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+    font-size: 62.5%; //1rem =10px  10px/16px = 62.5%
+    /* Se dividio 10/16, 10 el tamaño de fuente que queremos para toda la página, y 16 el tamaño de fuente por defecto, en porcentaje para mejorar 
+    la experiencia del usuario cuando quiera agrandar el tamaño de la fuente(todas las medidas que esten en rem cambian) de la página */
+
+    @include respond(xl) {
+        //width < 1200 ?
+        font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%
+    }
+
+    @include respond(lg) {
+        //width < 992 ?
+        font-size: 50%; //1rem = 8px, 8/16 = 50%
+    }
+
+    // @include respond(xxl) {
+    //     //width > 1400 ? 
+    //     font-size: 68%; //1rem = 11px, 11/16 =68%
+    // }
+
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    color: var(--black);
+}
+
+::selection {
+    background: var(--primary-hsl);
+    color: var(--secondary-color);
+}
+
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--secondary-color);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 2rem;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 2rem;
+    border: 3px solid var(--secondary-color);
+}
